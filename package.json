@@ -1,0 +1,72 @@
+{
+  "name": "auto-hide-cursor",
+  "displayName": "Auto Hide Cursor (Typing)",
+  "description": "在 VS Code 中打字时自动隐藏鼠标指针，鼠标稍微一动就恢复显示。仅影响 VS Code 窗口。",
+  "version": "0.0.1",
+  "publisher": "local",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "cursor",
+    "mouse",
+    "typing",
+    "hide"
+  ],
+  "os": [
+    "win32"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "autoHideCursor.toggle",
+        "title": "自动隐藏鼠标: 开 / 关"
+      },
+      {
+        "command": "autoHideCursor.show",
+        "title": "自动隐藏鼠标: 立即显示鼠标"
+      },
+      {
+        "command": "autoHideCursor.restoreSystemCursor",
+        "title": "自动隐藏鼠标: 强制恢复系统光标"
+      }
+    ],
+    "configuration": {
+      "title": "Auto Hide Cursor",
+      "properties": {
+        "autoHideCursor.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "启用后在 VS Code 编辑器中打字时自动隐藏鼠标指针。"
+        },
+        "autoHideCursor.movementThreshold": {
+          "type": "number",
+          "default": 3,
+          "minimum": 1,
+          "maximum": 50,
+          "description": "鼠标移动多少像素后恢复显示。默认 3 像素。"
+        },
+        "autoHideCursor.pollInterval": {
+          "type": "number",
+          "default": 20,
+          "minimum": 10,
+          "maximum": 200,
+          "description": "隐藏状态下检测鼠标移动的间隔（毫秒）。越低恢复越快，但 CPU 占用略高。"
+        },
+        "autoHideCursor.debug": {
+          "type": "boolean",
+          "default": false,
+          "description": "在扩展宿主控制台输出调试日志。"
+        }
+      }
+    }
+  }
+}
