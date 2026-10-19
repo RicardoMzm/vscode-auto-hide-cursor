@@ -1,6 +1,6 @@
 # 自动隐藏鼠标（VS Code 插件）
 
-![打字时隐藏鼠标，移动后恢复](https://raw.githubusercontent.com/RicardoMzm/vscode-auto-hide-cursor/main/images/demo.gif)
+![打字时隐藏鼠标，移动后恢复](https://images.weserv.nl/?url=raw.githubusercontent.com/RicardoMzm/vscode-auto-hide-cursor/main/images/demo.gif&n=-1)
 
 *效果示意：打字时鼠标淡出，移动一下马上回来。*
 
