@@ -4,12 +4,16 @@
 
 只对 VS Code 生效。切到浏览器、终端或者其他窗口，指针立刻恢复正常，不会影响别的软件。
 
+![打字时隐藏鼠标，移动后恢复](images/demo.gif)
+
+*效果示意：打字时鼠标淡出，移动一下马上回来。*
+
 ## 安装
 
-双击 `auto-hide-cursor-0.0.1.vsix`，或者：
+去 [Releases](https://github.com/RicardoMzm/vscode-auto-hide-cursor/releases/latest) 下载 `auto-hide-cursor-0.0.1.vsix`，双击安装，或者：
 
 ```powershell
-code --install-extension "auto-hide-cursor-0.0.1.vsix"
+code --install-extension "下载路径\auto-hide-cursor-0.0.1.vsix"
 ```
 
 装完重载一下窗口就好。
